@@ -1,14 +1,15 @@
-export default function UserProfile() {
+import React, { useContext } from "react";
+import UserContext from "../UserContext";
+
+function UserProfile() {
+  const userData = useContext(UserContext);
+
   return (
-    <div
-      style={{
-        border: "2px solid blue",
-        padding: "10px",
-        margin: "10px",
-        color: "darkblue",
-      }}
-    >
-      <span style={{ fontWeight: "bold" }}>Username:</span> Katey Kwesi
+    <div>
+      <p>Name: {userData?.name}</p>
+      <p>Email: {userData?.email}</p>
     </div>
   );
 }
+
+export default UserProfile;
