@@ -1,10 +1,14 @@
-const UserProfile = (props) => {
+export default function UserProfile() {
   return (
-    <div>
-      <h2>{props.name}</h2>
-      <p>Age: {props.age}</p>
-      <p>Bio: {props.bio}</p>
+    <div
+      style={{
+        border: "2px solid blue",
+        padding: "10px",
+        margin: "10px",
+        color: "darkblue",
+      }}
+    >
+      <span style={{ fontWeight: "bold" }}>Username:</span> Katey Kwesi
     </div>
   );
-};
-export default UserProfile;
+}
